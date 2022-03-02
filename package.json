@@ -1,0 +1,28 @@
+{
+  "name": "typeflex",
+  "private": true,
+  "version": "0.0.4",
+  "description": "Typescript implementation of CSS flexbox layout algorithm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rmartone/typeflex.git"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.1",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "build:node": "rm -rf node && tsc -p tsconfig.node.json",
+    "check": "tsc --noEmit",
+    "test": "npm run build:node && mocha --expose-gc -r tests/tools.js tests/Facebook.Yoga/**/*.js",
+    "benchmark": "npm run build:node && node tests/run-bench tests/Benchmarks/YGBenchmark.js"
+  },
+  "main": "lib/api.js",
+  "types": "lib/api.d.ts",
+  "directories": {
+    "test": "tests"
+  }
+}
