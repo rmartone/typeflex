@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rmartone/typeflex.git"
+    "url": "https://https://github.com/rmartone/typeflex"
   },
   "devDependencies": {
     "mocha": "^9.2.1",
