@@ -28,6 +28,7 @@
   "dependencies": {},
   "author": "",
   "directories": {
+    "lib": "dist",
     "test": "tests"
   }
 }
