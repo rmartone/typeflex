@@ -1,6 +1,5 @@
 {
   "name": "@rmartone/typeflex",
-  "private": true,
   "version": "0.0.4",
   "description": "Typescript implementation of CSS flexbox layout algorithm",
   "license": "MIT",
@@ -22,11 +21,13 @@
   },
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
-  "directories": {
-    "test": "tests"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/rmartone",
     "access": "restricted"
+  },
+  "dependencies": {},
+  "author": "",
+  "directories": {
+    "test": "tests"
   }
 }
