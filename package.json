@@ -1,6 +1,6 @@
 {
   "name": "@rmartone/typeflex",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Typescript implementation of CSS flexbox layout algorithm",
   "license": "MIT",
   "repository": {
