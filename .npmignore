@@ -1,10 +1,6 @@
 .*
 .*/
-!.github
 !.gitignore
-!.gitattributes
 !.npmrc
-!.npmignore
 node_modules/
-dist/
 tests/dist/
