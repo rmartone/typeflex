@@ -20,13 +20,6 @@
   },
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
-  "files": [
-    "dist/",
-    "src/",
-    "tests/",
-    "tsconfig.node.json",
-    "tsconfig.json"
-  ],
   "publishConfig": {
     "@rmartone:registry": "https://npm.pkg.github.com",
     "access": "restricted"
@@ -34,7 +27,6 @@
   "dependencies": {},
   "author": "",
   "directories": {
-    "lib": "dist",
     "test": "tests"
   }
 }
