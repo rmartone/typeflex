@@ -116,6 +116,24 @@ import { YGValue } from "./ygvalue"
 import { YGConfig } from "./ygconfig"
 import { YGFloatSanitize } from "./utils"
 
+export {
+    YGAlign,
+    YGDimension,
+    YGDirection,
+    YGDisplay,
+    YGEdge,
+    YGExperimentalFeature,
+    YGFlexDirection,
+    YGJustify,
+    YGLogLevel,
+    YGMeasureMode,
+    YGNodeType,
+    YGOverflow,
+    YGPositionType,
+    YGUnit,
+    YGWrap
+};
+
 export const ALIGN_AUTO = YGAlign.Auto;
 export const ALIGN_FLEX_START = YGAlign.FlexStart;
 export const ALIGN_CENTER = YGAlign.Center;
