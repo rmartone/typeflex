@@ -1,7 +1,7 @@
-var Yoga = Yoga || require("../lib/api.js");
+var Yoga = Yoga || require('../dist/api.js');
 
 // testing the case that interests me
-it("absolute_layout_0x0x0x0", function () {
+it('absolute_layout_0x0x0x0', function () {
   var config = Yoga.Config.create();
 
   try {
@@ -30,25 +30,55 @@ it("absolute_layout_0x0x0x0", function () {
 
     root.calculateLayout(Yoga.UNDEFINED, Yoga.UNDEFINED, Yoga.DIRECTION_LTR);
 
-    console.assert(0 === root.getComputedLeft(), "0 === root.getComputedLeft() (" + root.getComputedLeft() + ")");
-    console.assert(0 === root.getComputedTop(), "0 === root.getComputedTop() (" + root.getComputedTop() + ")");
-    console.assert(1024 === root.getComputedWidth(), "1024 === root.getComputedWidth() (" + root.getComputedWidth() + ")");
-    console.assert(768 === root.getComputedHeight(), "768 === root.getComputedHeight() (" + root.getComputedHeight() + ")");
+    console.assert(0 === root.getComputedLeft(), '0 === root.getComputedLeft() (' + root.getComputedLeft() + ')');
+    console.assert(0 === root.getComputedTop(), '0 === root.getComputedTop() (' + root.getComputedTop() + ')');
+    console.assert(
+      1024 === root.getComputedWidth(),
+      '1024 === root.getComputedWidth() (' + root.getComputedWidth() + ')'
+    );
+    console.assert(
+      768 === root.getComputedHeight(),
+      '768 === root.getComputedHeight() (' + root.getComputedHeight() + ')'
+    );
 
-    console.assert(0 === root_child0.getComputedLeft(), "0 === root_child0.getComputedLeft() (" + root_child0.getComputedLeft() + ")");
-    console.assert(0 === root_child0.getComputedTop(), "0 === root_child0.getComputedTop() (" + root_child0.getComputedTop() + ")");
-    console.assert(1024 === root_child0.getComputedWidth(), "1024 === root_child0.getComputedWidth() (" + root_child0.getComputedWidth() + ")");
-    console.assert(768 === root_child0.getComputedHeight(), "768 === root_child0.getComputedHeight() (" + root_child0.getComputedHeight() + ")");
+    console.assert(
+      0 === root_child0.getComputedLeft(),
+      '0 === root_child0.getComputedLeft() (' + root_child0.getComputedLeft() + ')'
+    );
+    console.assert(
+      0 === root_child0.getComputedTop(),
+      '0 === root_child0.getComputedTop() (' + root_child0.getComputedTop() + ')'
+    );
+    console.assert(
+      1024 === root_child0.getComputedWidth(),
+      '1024 === root_child0.getComputedWidth() (' + root_child0.getComputedWidth() + ')'
+    );
+    console.assert(
+      768 === root_child0.getComputedHeight(),
+      '768 === root_child0.getComputedHeight() (' + root_child0.getComputedHeight() + ')'
+    );
 
-    console.assert(0 === root_child1.getComputedLeft(), "0 === root_child1.getComputedLeft() (" + root_child1.getComputedLeft() + ")");
-    console.assert(0 === root_child1.getComputedTop(), "0 === root_child1.getComputedTop() (" + root_child1.getComputedTop() + ")");
-    console.assert(1024 === root_child1.getComputedWidth(), "1024 === root_child1.getComputedWidth() (" + root_child1.getComputedWidth() + ")");
-    console.assert(768 === root_child1.getComputedHeight(), "768 === root_child1.getComputedHeight() (" + root_child1.getComputedHeight() + ")");
+    console.assert(
+      0 === root_child1.getComputedLeft(),
+      '0 === root_child1.getComputedLeft() (' + root_child1.getComputedLeft() + ')'
+    );
+    console.assert(
+      0 === root_child1.getComputedTop(),
+      '0 === root_child1.getComputedTop() (' + root_child1.getComputedTop() + ')'
+    );
+    console.assert(
+      1024 === root_child1.getComputedWidth(),
+      '1024 === root_child1.getComputedWidth() (' + root_child1.getComputedWidth() + ')'
+    );
+    console.assert(
+      768 === root_child1.getComputedHeight(),
+      '768 === root_child1.getComputedHeight() (' + root_child1.getComputedHeight() + ')'
+    );
 
     //console.log(root_child0.getComputedLayout());
     //console.log(root_child1.getComputedLayout());
   } finally {
-    if (typeof root !== "undefined") {
+    if (typeof root !== 'undefined') {
       root.freeRecursive();
     }
 

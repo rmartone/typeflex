@@ -3,5 +3,4 @@
 !.gitignore
 node_modules/
 dist/
-lib/
-tests/lib/
+tests/dist/

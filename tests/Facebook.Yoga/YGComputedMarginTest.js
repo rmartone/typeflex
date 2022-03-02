@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var Yoga = Yoga || require("../lib/api.js");
+var Yoga = Yoga || require('../dist/api.js');
 
-it("margin_start", function () {
+it('margin_start', function () {
   var root = Yoga.Node.create();
   root.setWidth(100);
   root.setHeight(100);
@@ -15,17 +15,16 @@ it("margin_start", function () {
 
   root.calculateLayout(100, 100, Yoga.DIRECTION_LTR);
 
-  console.assert(10 === root.getComputedMargin(Yoga.EDGE_LEFT), "10 === root.getComputedMargin(Yoga.EDGE_LEFT)");
-  console.assert(0 === root.getComputedMargin(Yoga.EDGE_RIGHT), "0 === root.getComputedMargin(Yoga.EDGE_RIGHT)");
+  console.assert(10 === root.getComputedMargin(Yoga.EDGE_LEFT), '10 === root.getComputedMargin(Yoga.EDGE_LEFT)');
+  console.assert(0 === root.getComputedMargin(Yoga.EDGE_RIGHT), '0 === root.getComputedMargin(Yoga.EDGE_RIGHT)');
 
   root.calculateLayout(100, 100, Yoga.DIRECTION_RTL);
 
-  console.assert(0 === root.getComputedMargin(Yoga.EDGE_LEFT), "0 === root.getComputedMargin(Yoga.EDGE_LEFT)");
-  console.assert(10 === root.getComputedMargin(Yoga.EDGE_RIGHT), "10 === root.getComputedMargin(Yoga.EDGE_RIGHT)");
+  console.assert(0 === root.getComputedMargin(Yoga.EDGE_LEFT), '0 === root.getComputedMargin(Yoga.EDGE_LEFT)');
+  console.assert(10 === root.getComputedMargin(Yoga.EDGE_RIGHT), '10 === root.getComputedMargin(Yoga.EDGE_RIGHT)');
 
-  if (typeof root !== "undefined")
-    root.freeRecursive();
+  if (typeof root !== 'undefined') root.freeRecursive();
 
-  (typeof gc !== "undefined") && gc();
-  console.assert(0 === Yoga.getInstanceCount(), "0 === Yoga.getInstanceCount() (" + Yoga.getInstanceCount() + ")");
+  typeof gc !== 'undefined' && gc();
+  console.assert(0 === Yoga.getInstanceCount(), '0 === Yoga.getInstanceCount() (' + Yoga.getInstanceCount() + ')');
 });
