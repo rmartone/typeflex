@@ -1,6 +1,7 @@
 .*
 .*/
 !.gitignore
+!.npmignore
 !.npmrc
 node_modules/
 tests/dist/
