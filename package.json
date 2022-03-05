@@ -8,13 +8,22 @@
     "url": "https://github.com/rmartone/typeflex"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "mocha": "^9.2.1",
+    "prettier": "2.5.1",
+    "prettier-plugin-organize-imports": "^2.3.4",
     "typescript": "^4.6.2"
   },
   "scripts": {
     "build": "rm -rf dist && tsc",
     "build:node": "tsc -p tsconfig.node.json",
     "check": "tsc --noEmit",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix && tsc",
     "test": "npm run build:node && npx mocha --expose-gc -r tests/tools.js tests/Facebook.Yoga/**/*.js",
     "benchmark": "npm run build:node && node tests/run-bench tests/Benchmarks/YGBenchmark.js"
   },
@@ -24,9 +33,47 @@
     "@rmartone:registry": "https://npm.pkg.github.com",
     "access": "restricted"
   },
-  "dependencies": {},
   "author": "",
   "directories": {
     "test": "tests"
-  }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/consistent-type-imports": 2,
+      "no-fallthrough": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": true,
+          "trailingComma": "all",
+          "singleQuote": true,
+          "printWidth": 120
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "dist",
+    "node_modules"
+  ]
 }
