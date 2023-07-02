@@ -30,10 +30,6 @@
   },
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
-  "publishConfig": {
-    "@rmartone:registry": "https://npm.pkg.github.com",
-    "access": "restricted"
-  },
   "author": "",
   "directories": {
     "test": "tests"
