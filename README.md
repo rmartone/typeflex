@@ -1,5 +1,4 @@
 # typeflex
 
-Based on open source versions that aren't maintained.
+Updated open source versions that isn't maintained.
 
-Just keeping it working and up to date.

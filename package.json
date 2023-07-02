@@ -1,5 +1,5 @@
 {
-  "name": "@rmartone/typeflex",
+  "name": "typeflex3",
   "version": "0.0.18",
   "description": "Typescript implementation of CSS flexbox layout algorithm",
   "license": "MIT",
